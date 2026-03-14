@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeQuest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans pb-20">
+
+    <header class="bg-indigo-600 text-white p-6 shadow-md rounded-b-3xl">
+        <h1 class="text-3xl font-bold text-center mb-4">LifeQuest</h1>
+        <div class="flex justify-between items-center mb-2">
+            <span class="font-semibold text-lg" id="levelDisplay">Level 1</span>
+            <span class="text-sm opacity-80" id="xpText">0 / 100 XP</span>
+        </div>
+        <div class="w-full bg-indigo-900 rounded-full h-4 overflow-hidden">
+            <div id="xpBar" class="bg-green-400 h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
+        </div>
+    </header>
+
+    <main class="p-4 mt-4">
+        <h2 class="text-xl font-bold mb-4 text-gray-700">Daily Quests</h2>
+        
+        <ul id="taskList" class="space-y-3 mb-6">
+            </ul>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-200">
+            <h3 class="text-lg font-semibold mb-3">Add New Quest</h3>
+            <input type="text" id="newTaskInput" placeholder="e.g., Cook dinner" class="w-full p-2 border border-gray-300 rounded-lg mb-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            
+            <div class="flex gap-2">
+                <select id="taskDifficulty" class="p-2 border border-gray-300 rounded-lg bg-white flex-1">
+                    <option value="10">Easy (10 XP)</option>
+                    <option value="25">Medium (25 XP)</option>
+                    <option value="50">Hard (50 XP)</option>
+                </select>
+                <button onclick="addTask()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-indigo-700 transition">Add</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

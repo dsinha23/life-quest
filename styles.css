@@ -1,0 +1,17 @@
+/* Prevent zooming on input focus for mobile devices */
+input, select {
+    font-size: 16px !important;
+}
+
+/* Smooth completion animation */
+.completed-task {
+    opacity: 0.5;
+    text-decoration: line-through;
+    transition: all 0.3s ease;
+}
+
+/* Base resets for a native app feel */
+body {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
